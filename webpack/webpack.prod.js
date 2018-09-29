@@ -87,6 +87,9 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
             })
         ]
     },
+    performance: {
+        hints: process.env.NODE_ENV === 'production' ? "warning" : false
+      },
     plugins: [
         extractCSS,
         new MomentLocalesPlugin({
